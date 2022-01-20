@@ -1,0 +1,230 @@
+
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic);
+
+
+html {
+	height: 100%;
+	background: black;
+	background: radial-gradient(circle, #2C2D2E 50%, #212324);
+	background-size: cover;
+}
+
+/* Div principal de la calculadora */
+#calculette {
+	width : 170px;
+	height: auto;
+  vertical-align : middle;
+	
+	/* Margen */
+	margin 		 : 0px auto;
+	padding		 : 10px;
+	padding-bottom : 5px;
+	
+	background : -webkit-gradient(linear, center top, center bottom, from(#4E9BC9), to(#478EB7));
+	background : -webkit-linear-gradient(#4E9BC9, #478EB7);
+	background : -moz-linear-gradient(#4E9BC9, #478EB7);
+	background : -o-linear-gradient(#4E9BC9, #478EB7);
+	background : -ms-linear-gradient(#4E9BC9, #478EB7);
+	background : linear-gradient(#4E9BC9, #478EB7);
+	
+	border-radius : 3px;
+	
+	font  : bold 14px Arial, sans-serif;
+	color : #888;
+	
+	/*Efecto 3D*/
+	box-shadow : 0px 5px 5px 0px #2A4556;
+}
+
+#marqueModele {
+  font-family: bold;
+  font-family: 'Libre Baskerville';
+  text-align:center;
+  margin-bottom :5px;
+  color:white;
+}
+  
+.enteteCalculette .ecran {
+	height     : 35px;
+	width      : 115px;
+	float      : left;
+	
+	background : linear-gradient(#34546B, #436C89);
+	background : -webkit-gradient(linear, center top, center bottom, from(#34546B), to(#436C89));
+	background : -webkit-linear-gradient(#34546B, #436C89);
+	background : -moz-linear-gradient(#34546B, #436C89);
+	background : -o-linear-gradient(#34546B, #436C89);
+	background : -ms-linear-gradient(#34546B, #436C89);
+	background : linear-gradient(#34546B, #436C89);
+	
+	-webkit-border-top-left-radius    : 3px;
+	-webkit-border-bottom-left-radius : 3px;
+	-moz-border-radius-topleft        : 3px;
+	-moz-border-radius-bottomleft	    : 3px;
+	border-top-left-radius	   	 	    : 3px;
+	border-bottom-left-radius		      : 3px;
+	
+	/*Efecto 3D*/
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+	
+	font-size     : 15px;
+	line-height   : 40px;
+	color         : white;
+	text-shadow   : 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align    : right;
+	padding-right : 5px;
+}
+
+.touchesCalculette, .enteteCalculette {
+	overflow : hidden;
+}
+
+.touchesCalculette span, .enteteCalculette span.reset {
+	position:relative;
+
+	float        : left;
+	width        : 35px;
+	height       : 35px;
+	line-height  : 35px;
+	text-align   : center;
+	margin       : 0 5px 5px 0;
+	
+	background  : white;
+	border-radius : 3px;
+	
+	
+	cursor: pointer;
+
+	/*Efecto 3D*/
+	box-shadow: 0px 3px 2px 0px #326682;
+	
+	
+	-khtml-user-select : none;
+	-webkit-user-select: none;
+	-moz-user-select   : -moz-none;
+	-ms-user-select    : none;
+	user-select        : none;
+
+	/*Animacion*/
+	transition        : all 0.2s ease;
+	-webkit-transition: all .2s ease-in;
+    -moz-transition   : all .2s ease-in;
+    -o-transition     : all .2s ease-in;
+}
+
+
+.enteteCalculette span.reset {
+	margin: 0 0px 5px 0;
+}
+
+
+span.operateurs {
+	
+	margin-right     : 0px;
+	background-color : #FFE1C1;
+    box-shadow         : 0px 3px 2px 0px #824801;
+}
+.touchesCalculette span.egal {
+	background-color : #C4DBC0;
+	box-shadow         : 0px 3px 2px 0px #4C6048;
+}
+.enteteCalculette span.reset {
+	color            : white;
+	background-color : #FF6875;
+	box-shadow         : 0px 3px 2px 0px #89373C;
+}
+
+
+.touchesCalculette span:hover {
+	background-color : #E2E2E2;
+	box-shadow         : 0px 3px 2px 0px #4084A5;
+}
+span.operateurs:hover {
+	background-color : #FFEEC9;
+	box-shadow         : 0px 3px 2px 0px #E07C02;
+}
+.touchesCalculette span.egal:hover {
+	background-color : #DEF7D9;
+	box-shadow         : 0px 3px 2px 0px #8FB587;
+}
+.enteteCalculette span.reset:hover {
+	background-color : #FFADB5;
+	box-shadow         : 0px 3px 2px 0px #DB5962;
+}
+
+/*Simulacion de presionar el boton*/
+.touchesCalculette span:active {
+	top: 2px;
+	box-shadow: 0px 1px 2px 0px #2E6077;
+}
+span.operateurs:active {
+	top: 2px;
+	box-shadow: 0px 1px 2px 0px #E07C02;
+}
+.touchesCalculette span.egal:active {
+	top: 2px;
+	box-shadow: 0px 1px 2px 0px #8FB587;
+}
+.enteteCalculette span.reset:active {
+	top: 2px;
+	box-shadow: 0px 1px 2px 0px #DB5962;
+}
+
+
+.touchesCalculetteErreur {
+	
+	animation: 		   animationError 0.2s infinite alternate;
+	-webkit-animation: animationError 0.2s infinite alternate;
+}
+
+@keyframes animationError {
+	/* 0% = default background-color */
+	100% {
+		background-color: #F00;
+		background: radial-gradient(circle, #F00 20%, #ccc);
+		background-size: cover;
+	}
+}
+@-webkit-keyframes animationError {
+	/* 0% = default background-color */
+	100% {
+		background-color: #F00;
+		background: radial-gradient(circle, #F00 20%, #ccc);
+		background-size: cover;
+	}
+}
+
+#base{
+	position:relative;
+
+	/* Forma del boton 0 */
+	float        : left;
+	width        : 75px;
+	height       : 35px;
+	line-height  : 35px;
+	text-align   : center;
+	margin       : 0 5px 5px 0;
+	
+	background  : white;
+	border-radius : 3px;
+	
+	
+	cursor: pointer;
+
+	/*Efecto 3D*/
+	box-shadow: 0px 3px 2px 0px #326682;
+	
+	
+	-khtml-user-select : none;
+	-webkit-user-select: none;
+	-moz-user-select   : -moz-none;
+	-ms-user-select    : none;
+	user-select        : none;
+
+	/*Animacion*/
+	transition        : all 0.2s ease;
+	-webkit-transition: all .2s ease-in;
+    -moz-transition   : all .2s ease-in;
+    -o-transition     : all .2s ease-in;
+}
+

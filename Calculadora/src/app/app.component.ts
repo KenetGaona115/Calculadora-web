@@ -33,7 +33,10 @@ export class AppComponent {
   }
 
   result() {
-
+    if (this.validateLastIndex()) {
+      
+      this.numeros = eval(this.numeros).toString();
+    }
   }
 
   reset() {
@@ -42,7 +45,6 @@ export class AppComponent {
 
   private validateLastIndex() {
     const char = this.numeros.charAt(this.numeros.length - 1);
-    console.log(char)
     return !this.operadores.includes(char)
   }
 
